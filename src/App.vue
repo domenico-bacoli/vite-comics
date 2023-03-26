@@ -1,7 +1,9 @@
 <script>
 import AppNavbar from "./components/AppNavbar.vue";
-import AppJumbo from "./components/AppJumbo.vue";
-import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
+import AppBluBandSection from "./components/AppBluBandSection.vue";
+import AppFooterBottom from "./components/AppFooterBottom.vue";
+import AppFooterTop from "./components/AppFooterTop.vue";
 
 export default {
   data() {
@@ -12,8 +14,10 @@ export default {
 
   components: {
     AppNavbar,
-    AppJumbo,
-    AppHeader,
+    AppMain,
+    AppBluBandSection,
+    AppFooterBottom,
+    AppFooterTop,
   }
 }
 
@@ -22,8 +26,9 @@ export default {
 <template>
   <div>
     <AppNavbar></AppNavbar>
-    <AppJumbo></AppJumbo>
-    <AppHeader></AppHeader>
+    <AppMain></AppMain>
+    <AppFooterTop></AppFooterTop>
+    <AppFooterBottom></AppFooterBottom>
   </div>
 </template>
 

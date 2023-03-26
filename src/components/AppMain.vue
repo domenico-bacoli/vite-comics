@@ -1,30 +1,30 @@
 <script>
+import AppBluBandSection from './AppBluBandSection.vue';
+
 
 export default {
     data() {
-        return {
-
-        }
-    }
+        return {};
+    },
+    components: { AppBluBandSection }
 }
 
 </script>
 
 
 <template>
-    <div class="jumbo">
-
+    <div class="main">
         <div class="container-centered">
             <h3>Content Goes here</h3>
         </div>
-
     </div>
+    <AppBluBandSection></AppBluBandSection>
 </template>
 
 
 
 <style lang="scss" scoped>
-.jumbo {
+.main {
     display: flex;
     align-items: center;
     background-color: black;

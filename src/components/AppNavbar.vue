@@ -3,7 +3,18 @@
 export default {
     data() {
         return {
-
+            navLinks: [
+                'CHARACTERS',
+                'COMICS',
+                'MOVIES',
+                'TV',
+                'GAMES',
+                'COLLECTIBLES',
+                'VIDEOS',
+                'FANS',
+                'NEWS',
+                'SHOP'
+            ],
         }
     }
 }
@@ -18,16 +29,8 @@ export default {
                 <img src="/img/dc-logo.png" alt="logo DC">
             </div>
             <ul>
-                <li>CHARACTERS</li>
-                <li>COMICS</li>
-                <li>MOVIES</li>
-                <li>TV</li>
-                <li>GAMES</li>
-                <li>COLLECTIBLES</li>
-                <li>VIDEOS</li>
-                <li>FANS</li>
-                <li>NEWS</li>
-                <li>SHOP</li>
+                <li v-for="link in navLinks">{{ link }}</li>
+
             </ul>
         </div>
     </nav>
@@ -59,8 +62,8 @@ nav {
     ul {
         display: flex;
         align-items: center;
-        gap: 16px;
-        font-size: .8em;
+        gap: 22px;
+        font-size: .7em;
         font-weight: bold;
     }
 }
