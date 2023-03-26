@@ -15,6 +15,14 @@ export default {
                 'NEWS',
                 'SHOP'
             ],
+
+            activeIndex: 0,
+        }
+    },
+
+    methods: {
+        activeLink(index) {
+            this.activeIndex = index;
         }
     }
 }
@@ -29,8 +37,9 @@ export default {
                 <img src="/img/dc-logo.png" alt="logo DC">
             </div>
             <ul>
-                <li v-for="link in navLinks">{{ link }}</li>
-
+                <li v-for="(link, index) in navLinks" @click="activeLink(index)"
+                    :class="activeIndex == index ? 'active' : ''">{{
+                        link }}</li>
             </ul>
         </div>
     </nav>
@@ -65,6 +74,20 @@ nav {
         gap: 22px;
         font-size: .7em;
         font-weight: bold;
+        height: 100%;
+    }
+
+    li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &.active {
+            color: rgb(2, 119, 248);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid rgb(2, 119, 248);
+        }
     }
 }
 </style>
