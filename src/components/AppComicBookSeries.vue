@@ -16,7 +16,7 @@ export default {
 
 
 <template>
-    <div class="container-centered">
+    <div class="card-container container-centered">
         <div class="card-series">
             <img :src="img" alt="series image">
 
@@ -27,22 +27,24 @@ export default {
 
 
 <style lang="scss" scoped>
-.card-series {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
+.card-container {
+    width: calc(100% / 6 - (20px / 6 * 5));
 
-    img {
-        width: 100%;
+    .card-series {
+        height: 150px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
     }
-}
 
-.series-title {
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.62em;
-    font-weight: bold;
-    width: 140px;
-    padding-top: 8px;
+    .series-title {
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.62em;
+        font-weight: bold;
+        padding-top: 8px;
+    }
 }
 </style>
