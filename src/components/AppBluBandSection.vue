@@ -64,7 +64,7 @@ section {
             font-weight: bold;
 
             & img {
-                width: 36px;
+                width: 38px;
             }
 
             &:nth-child(4) img {
@@ -72,7 +72,5 @@ section {
             }
         }
     }
-
-
 }
 </style>

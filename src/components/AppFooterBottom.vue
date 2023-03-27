@@ -9,9 +9,9 @@ export default {
                 '/img/footer-youtube.png',
                 '/img/footer-pinterest.png',
                 '/img/footer-periscope.png',
-            ]
+            ],
         }
-    }
+    },
 }
 </script>
 
@@ -53,6 +53,7 @@ footer {
             background-color: rgb(48, 48, 48);
             color: white;
             font-weight: bold;
+            cursor: pointer;
         }
     }
 
@@ -61,13 +62,13 @@ footer {
         align-items: center;
         gap: 14px;
 
-        button {
-            padding: 10px 20px;
-        }
-
         span {
             color: rgb(2, 119, 248);
             font-weight: bold;
+        }
+
+        img {
+            cursor: pointer;
         }
     }
 }

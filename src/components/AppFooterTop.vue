@@ -3,10 +3,10 @@ export default {
     data() {
         return {
 
-            mainList: [
+            footerLinks: [
                 {
                     title: 'DC COMICS',
-                    mainLinks: [
+                    links: [
                         'Characters',
                         'Comics',
                         'Movies',
@@ -17,8 +17,15 @@ export default {
                     ],
                 },
                 {
+                    title: 'SHOP',
+                    links: [
+                        'Shop DC',
+                        'Shop DC Collectibles',
+                    ],
+                },
+                {
                     title: 'DC',
-                    mainLinks: [
+                    links: [
                         'Terms Of Use',
                         'Privacy policy (New)',
                         'Ad Choices',
@@ -34,7 +41,7 @@ export default {
                 },
                 {
                     title: 'SITES',
-                    mainLinks: [
+                    links: [
                         'DC',
                         'MAD Magazine',
                         'DC Kids',
@@ -42,13 +49,7 @@ export default {
                         'DC Power Visa',
                     ],
                 },
-                {
-                    title: 'SHOP',
-                    mainLinks: [
-                        'Shop DC',
-                        'Shop DC Collectibles',
-                    ],
-                },
+
             ],
         }
     },
@@ -60,10 +61,10 @@ export default {
     <footer>
         <div class="container-centered">
             <div class="footer-list">
-                <div v-for="item in mainList" class="col">
+                <div v-for="item in footerLinks" class="col">
                     <strong class="list-title">{{ item.title }}</strong>
                     <ul>
-                        <li v-for="link in item.mainLinks" class="list-element">{{ link }}</li>
+                        <li v-for="link in item.links" class="list-element">{{ link }}</li>
                     </ul>
                 </div>
 
@@ -88,10 +89,13 @@ footer {
 
     .footer-list {
         display: flex;
-        flex-flow: row wrap;
-        gap: 40px;
-        width: 50%;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 30px;
         padding-top: 30px;
+        height: 320px;
 
         li {
             color: rgb(155, 155, 155);
@@ -99,7 +103,6 @@ footer {
         }
 
         .col {
-            height: 120px;
 
             strong {
                 color: white;
